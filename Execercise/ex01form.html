@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>寵物旅館</title>
+    <style>
+        /* 表格設定 */
+        table {
+            width: 100%;
+            border: 2px solid #000000;
+            margin-bottom: 30px;
+            /* border-collapse: collapse; */
+            /* 儲存格間距 */
+            border-spacing: 10px;
+        }
+
+        table th,
+        table td {
+            border: 1px solid gray;
+            /* 儲存格內距 */
+            padding: 10px 20px;
+        }
+
+        table th {
+            background-color: #ffeeee;
+            text-align: left;
+            /* 10em 是10個字寬度 */
+            width: 10em;
+        }
+
+        table caption {
+            margin-bottom: 10px;
+        }
+
+        /* 表單設定 */
+        table input[type="text"],
+        table input[type="email"],
+        table textarea {
+            border: 1px solid #cccccc;
+            padding: 10px;
+            font-size: 1em;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        table input[type="text"]:focus,
+        table input[type="email"]:focus,
+        table textarea:focus {
+            background-color: rgb(233, 233, 23);
+            border: 2px solid red;
+            border-radius: 10px;
+            outline: none;
+        }
+
+        /* 按鈕設定 */
+        .btns {
+            text-align: center;
+        }
+
+        .btns input {
+            width: 200px;
+            background-color: #ffffff;
+            border: 2px solid #f7c7a3;
+            padding: 10px;
+            border-radius: 10px;
+            font-size: 1em;
+            margin: 0 10px;
+        }
+
+        .btns input:hover {
+            background-color: #f6d9c9;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 表單與表格 HTML -->
+    <main>
+        <form>
+            <table>
+                <caption>主人資料</caption>
+
+                <tr>
+                    <th>姓名</th>
+                    <td>
+                        <input type="text" name="catName" required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th>年齡</th>
+                    <td>
+                        <select name="age">
+                            <option value="">請選擇</option>
+                            <option value="3">3歲以下</option>
+                            <option value="5">3～5歲</option>
+                            <option value="10">5～10歲</option>
+                            <option value="15">10～15歲</option>
+                            <option value="16">16歲以上</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th>性別</th>
+                    <td>
+                        <input type="radio" name="gender" value="male" checked>男生
+                        <input type="radio" name="gender" value="female">女生
+                    </td>
+                </tr>
+
+                <tr>
+                    <th>照片</th>
+                    <td>
+                        <input type="file">
+                    </td>
+                </tr>
+            </table>
+
+            <table>
+                <caption>寵物資料</caption>
+
+                <tr>
+                    <th>寵物名</th>
+                    <td>
+                        <input type="text" name="name" required placeholder="來福">
+                        ※可用暱稱
+                    </td>
+                </tr>
+
+                <tr>
+                    <th>最愛的食物</th>
+                    <td>
+                        <input type="checkbox" name="fav" value="魚">魚
+                        <input type="checkbox" name="fav" value="肉">肉
+                        <input type="checkbox" name="fav" value="乾飼料">乾飼料
+                        <input type="checkbox" name="fav" value="罐罐">罐罐
+                        <input type="checkbox" name="fav" value="肉泥">肉泥
+                        <input type="checkbox" name="fav" value="其它">其它
+                    </td>
+                </tr>
+
+                <tr>
+                    <th>寵物有什麼注意事項</th>
+                    <td>
+                        <textarea name="memo" id="" cols="30" rows="4"></textarea>
+                    </td>
+                </tr>
+            </table>
+
+            <div class="btns">
+                <input type="reset" value="清除重填">
+                <input type="submit" value="送出">
+            </div>
+        </form>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="" zh>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="./ex01.css"> -->
+    <link rel="stylesheet" href="./style_scss/ex01_scss.css">
+    <title>我家寵物test</title>
+    <style>
+       
+    </style>
+</head>
+
+<body>
+    <!-- 首頁 HTML -->
+    <main>
+        <header>
+            <h1>狗狗大集合</h1>
+            <p>介紹一下我家的狗</p>
+        </header>
+
+        <nav>
+            <ul class="menu">
+                <li><a href="#intro">關於本站</a></li>
+                <li><a href="#dogs">我家的狗</a></li>
+                <li><a href="#profile">合照</a></li>
+            </ul>
+        </nav>
+
+        <div class="content">
+            <section id="intro">
+                <h2>關於本站</h2>
+                <p>
+                    歡迎光臨本站。<br>
+                    這裡是介紹我家的狗，有可愛相片。<br>
+                    <strong>※未經許可，請勿擅自複製轉載。</strong>
+                </p>
+            </section>
+
+            <section id="dogs">
+                <h2>我家狗們</h2>
+
+                <section class="clearfix">
+                    <h3>寶哥</h3>
+                    <img class="imgL" src="../images/寶哥.jpg" alt="寶哥" width="300" height="400">
+                    <p>
+                        脾氣溫和<br>
+                        狗生不知道什麼叫做咬人
+                    </p>
+                    <p class="clear more_left">
+                        <a href="./dog01.html" target="_blank">更多介紹</a>
+                    </p>
+                    <!-- more_left::after 虛擬標籤在這邊-->
+                </section>
+
+                <section class="clearfix">
+                    <h3>捏捏</h3>
+                    <img class="imgR" src="../images/捏捏.PNG" alt="捏捏" width="300" height="400">
+                    <p>
+                        雙重人格<br>
+                        脾氣火爆，吃東西時絕對不要靠近它，會被捏捏啃
+                    </p>
+                    <p class="clear more_right">
+                        <a href="./dog02.html" target="_blank">更多介紹</a>
+                    </p>
+                </section>
+            </section>
+
+            <section id="profile">
+                <h2>合照</h2>
+                <img class="imgR imgRad profileImg" src="../images/合照.jpg" alt="合照" width="250" height="250">
+
+                <dl>
+                    <dt>日期：</dt>
+                    <dd>2020/05/20</dd>
+
+                    <dt>地點：</dt>
+                    <dd>某某咖啡園</dd>
+
+                    <dt>mail：</dt>
+                    <dd>
+                        <a href="mailto://gavin@wda.gov.tw">gavin@wda.gov.tw</a>
+                    </dd>
+
+                    <dt>Web：</dt>
+                    <dd>
+                        <a href="https://tcnr.wda.gov.tw/" target="_blank">
+                            https://tcnr.wda.gov.tw/
+                        </a>
+                    </dd>
+                </dl>
+            </section>
+        </div>
+
+        <footer>
+            <p><small>Copyright © Gavin's Web All Rights Reserved.</small></p>
+        </footer>
+    </main>
+
+
+</body>
+
+</html>

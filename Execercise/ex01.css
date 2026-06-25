@@ -1,0 +1,202 @@
+ /* 網頁背景顏色設定 */
+        body {
+            background-color: #fbf9cc;
+            background-image: url(../images/bg.png);
+            background-repeat: repeat-x;
+        }
+
+        /* 超連結顏色設定 */
+        a:link {
+            color: red;
+        }
+
+        a:visited {
+            color: black;
+        }
+
+        a:hover {
+            color: green;
+        }
+
+        a:active {
+            color: orange;
+        }
+
+        a {
+            color: red;
+        }
+
+        /* 頁首、導覽、頁尾的共通設定 */
+        header,
+        nav,
+        footer {
+            text-align: center;
+        }
+
+        /* 頁面標題設定 */
+        @font-face {
+            font-family: PixelifySans;
+            src: url(./PixelifySans-VariableFont_wght.ttf);
+        }
+
+        h1 {
+            color: white;
+            /* background-color: #59a986; */
+            width: 400px;
+            border: 5px solid #95dbbd;
+            padding: 30px;
+            box-sizing: border-box;
+            margin: 40px auto;
+            border-radius: 40%;
+            font-size: 300%;
+            line-height: 1em;
+            font-family: PixelifySans;
+            text-shadow: 0 0 5px black;
+            box-shadow: 0 0 10px black;
+            background: linear-gradient(to bottom, #6eba99, #4b9e7a);
+        }
+
+        /* 導覽樣式設定 */
+        .menu {
+            margin-left: -2.5em;
+        }
+
+        .menu li {
+            list-style-type: none;
+            /* border: 1px solid red; */
+            display: inline-block;
+            width: 200px;
+            margin: 0 10px;
+            /* padding: 10px; */
+            /* border-radius: 10px; */
+            /* background-color: #6fbb9a; */
+        }
+
+        .menu li a {
+            color: white;
+            text-decoration: none;
+            background-color: #6fbb9a;
+            padding: 10px;
+            display: block;
+            border-radius: 10px;
+        }
+
+        /* 內容區塊背景框設定 */
+        div.content {
+            background-color: #fff;
+            width: 960px;
+            border: 1px solid #f7c7a3;
+            margin: 30px auto;
+            padding: 40px 80px;
+            box-sizing: border-box;
+        }
+
+        /* 次標題樣式設定 */
+        h2 {
+            color: #76bd9b;
+            border: 1px dotted #76bd9b;
+            border-left: 10px solid #d0e35b;
+            padding: 10px;
+            border-radius: 10px 0 0 10px;
+        }
+
+        /* 小標題樣式設定 */
+        h3 {
+            color: #ff705b;
+            background-color: #fbf9cc;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 5px 5px #eeb3aa inset;
+        }
+
+        /* 文繞圖設定 */
+        .imgL {
+            float: left;
+            margin-right: 20px;
+        }
+
+        .imgR {
+            float: right;
+            margin-left: 20px;
+        }
+
+        .clear {
+            /* 去除float影響 */
+            clear: both;
+        }
+
+        /* 虛擬元素選擇器 clearfix官方定義的虛擬標籤*/
+        .clearfix::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        /* 「更多介紹」連結設定 */
+        .more_left {
+            text-align: left;
+        }
+
+        .more_right {
+            text-align: right;
+        }
+
+        .more_left::after {
+            content: url(../images/ico_arrow.png);
+            margin-left: 5px;
+            vertical-align: middle;
+        }
+
+        .more_right::after {
+            content: url(../images/ico_arrow.png);
+            margin-left: 5px;
+            vertical-align: middle;
+        }
+
+        /* 連結圖示設定 */
+        a[href^="mailto://"]::after {
+            content: url(../images/ico_mail.png);
+            margin-left: 5px;
+            vertical-align: middle;
+        }
+
+        a[href*="tcnr"]::after {
+            content: url(../images/ico_blank.png);
+            margin-left: 5px;
+            vertical-align: middle;
+        }
+
+        /* 區塊間分隔設定 */
+        /* 
+            section section 意思:section 裡面所有section
+        */
+        /* 法1.
+        section + section{
+            margin-top: 80px;
+        }
+        section section{
+            margin-top: 0px;
+        }
+        */
+        /* 法2. */
+        div.content>section~section {
+            margin-top: 80px;
+        }
+
+        /* 法3. 
+        div.content > section + section{
+            margin-top: 80px;
+        }
+        */
+
+
+        /* 圓形圖片設定 */
+        .imgRad {
+            border-radius: 50%;
+            border: 1px solid red;
+        }
+
+        .profileImg {
+            margin-top: -20px;
+            /* 往上移 */
+        }
